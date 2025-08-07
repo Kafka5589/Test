@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversor RGB ↔ HEX</title>
+  <title>RGB ↔ HEX Converter</title>
   <style>
     * {
       margin: 0;
@@ -20,7 +20,7 @@
       padding: 10px;
     }
     .container {
-      background: #fff;
+      background: #d4d4d4;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -28,17 +28,16 @@
       width: 100%;
       text-align: center;
     }
-    h1 {
-      margin-bottom: 15px;
-      font-size: 6vw;
-      color: #333;
+    h1{
+      padding:10px;
+      text-align:center;
     }
     @media(min-width: 600px){
       h1 { font-size: 24px; }
     }
     .converter {
       display: flex;
-      flex-direction: column;
+      flex-direction:column;
       gap: 15px;
     }
     .input-group {
@@ -65,6 +64,14 @@
       border: 1px solid #ccc;
       border-radius: 6px;
     }
+    .description {
+      font-family: Arial, sans-serif;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555;
+      text-align:center;
+      max-width: 400px;
+    }
     @media(min-width: 600px){
       input[type="number"], input[type="text"] {
         font-size: 16px;
@@ -89,7 +96,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Conversor RGB ↔ HEX</h1>
+    <h1>HEX-RGB Converter</h1>
     <div class="converter">
       <div class="input-group">
         <label>R:</label>
@@ -105,6 +112,13 @@
       </div>
       <div class="color-preview" id="colorPreview"></div>
     </div>
+    <p class="description">
+  The <strong>HEX</strong> code is used to represent colors on the web, especially in HTML and CSS. 
+  It's a compact, Hexadecimal-based way to define colors.
+  The <strong>RGB</strong> format, on the other hand, use three numeric values from 0 to 255 to
+  represent the amount of <b>R</b>ed, <b>G</b>reen and <b>B</b>lue.
+  HEX is more compact, while RGB is easier to read. 
+  </p>
   </div>
   <script>
     const rInput = document.getElementById('r');
